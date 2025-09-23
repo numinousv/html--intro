@@ -1,5 +1,9 @@
 body {
-  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
   margin: 0;
   background-image: linear-gradient(to right, rgb(239, 247, 252), rgb(147, 168, 210));
 }
@@ -12,7 +16,7 @@ section {
   border: 3px solid rgb(242, 151, 72);
   border-radius: 10px;
   padding: 20px;
-   margin: 0 auto;
+  align-items: center;
 }
 
 h1 {
@@ -45,11 +49,21 @@ p {
 }
 
 aside{
-  margin-left: 20px;
-  margin-top: 80px;
-  display: flex;
+  display: flex;   /* before change  */
+  justify-content: space-between;
+  align-items:center;
+  height: 100%;
+}
+img {
+/* margin-left: 25% */
+max-width: 150px;
+/* width: 100%; */
+/* height: auto; */
+border-radius: 12px; 
+transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-img {
-margin-left: 25%;
+img:hover {
+  transform: scale(1.2);
 }

@@ -74,3 +74,14 @@ margin-left: 25%;
 label{
   color: black;
 }
+
+#random_color{
+  position: fixed;
+  top: 209px;
+  left: 475px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px, solid black;
+  padding: 5px;
+  cursor: pointer;
+}

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>inter webz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -13,12 +15,24 @@
         <nav class="btn-container">
           <a href="index.html" class="btn home-btn">Home</a>
           <a href="contact-page.html" class="btn contact-btn">Contact</a>
+
+
+          <div class="settings">
+            <button id="rdm_color">Randomise Color</button>
+            <input type="checkbox" class="checkbox" id="checkbox"/>
+            <label for="checkbox" class="label">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
         </nav>
         <aside>
           <p>
             Give a man a fire and he's warm for a day, but set fire to him and
             he's warm for the rest of his life .
           </p>
+          <button id="q_button">Generate Quote</button>
           <img src="https://files.catbox.moe/hjugey.png" alt="Display Picture" />
         </aside>
       </section>

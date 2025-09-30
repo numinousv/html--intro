@@ -1,3 +1,16 @@
+:root {
+  --c1: hsl(100, 53%, 74%);
+  --c2: hsl(100, 56%, 30%);
+  --c3: hsl(208, 63%, 81%);
+  --c4: hsl(237, 54%, 37%);
+  --c5: hsl(8, 63%, 81%);
+  --c6: hsl(8, 61%, 23%);
+  --c7: hsl(165, 49%, 73%);
+  --c8: hsl(168, 55%, 26%);
+  --c9: hsl(320, 65%, 84%);
+  --c10: hsl(326, 68%, 22%);
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -18,6 +31,16 @@ section {
   padding: 20px;
   align-items: center;
 }
+body.randomise{ 
+  background-image: linear-gradient(to right, var(--random1), var(--random2));
+}
+section.randomise{ 
+    background-image: linear-gradient(to right, var(--random1) 0%, var(--random2) 100%,);
+  }
+ section.dark{
+      background-image: linear-gradient(to right, rgb(237, 209, 176), rgb(34, 20, 3));
+      background: #262626;
+  }
 
 h1 {
   color: rgba(228, 82, 14, 0.914);
@@ -25,8 +48,17 @@ h1 {
   font-weight: bold;
 }
 
+
+
 .btn-container {
-  margin-left: 80%;
+  display: flex;
+  gap: 8px;
+}
+
+.settings{
+  margin-left: 55%;
+  display: flex;
+  
 }
 
 .btn{
@@ -39,6 +71,14 @@ h1 {
 }
 .home-btn{
     background-color: rgba(253, 142, 91, 0.914);
+}
+
+#q_button{
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px, solid black;
+  padding: 5px;
+  cursor: pointer;
 }
 
 p {
@@ -55,15 +95,75 @@ aside{
   height: 100%;
 }
 img {
-/* margin-left: 25% */
+margin-left: 25%;
 max-width: 150px;
-/* width: 100%; */
-/* height: auto; */
+width: 100%;
+height: auto;
 border-radius: 12px; 
 transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+transition: transform 0.3s ease-in-out;
 }
 
 img:hover {
   transform: scale(1.2);
 }
+
+/* Randomise Color Button */
+#rdm_color{
+  margin-right: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px, solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Dark & Light Mode button */
+.checkbox{
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .label .ball{
+  transform: translateX(25px);
+}
+.label{
+  align-items: center;
+  display: flex;
+  width: 50px;
+  height: 24px;
+  justify-content: space-between;
+  background-color: #222;
+  border-radius: 50px;
+  padding: 5px;
+  position: relative;
+  /* transformscale: 1.5; */
+}
+.fa-moon{
+  color: #f1c40f;
+}
+.fa-sun{
+  color: #f39c12;
+}
+.ball{
+  width: 22px;
+  height: 22px;
+  background-color: #fcfcfc;
+  border-radius: 50%;
+  top:1px;
+  left:1px;
+  position: absolute;
+  transition: transform 0.2s linear;
+}
+
+/* Dark Mode Scene Style */
+body.dark{
+  background: linear-gradient(292.56deg, #0B132B -0.49%, #A2B4D9 97.35%);
+
+
+  p{
+    color: #fcfcfc;
+  }
+}
+/* body.dark p{
+  color: #fcfcfc;
+} */

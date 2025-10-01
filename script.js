@@ -1,13 +1,15 @@
-// const checkBox = document.getElementById("checkbox");
+import quoteData from "./quote.js";
 
-// checkBox.addEventListener("change", () => {
-//     document.body.classList.toggle("dark-mode");
-// });
-
+// Initialisation
 const section = document.querySelector("section");
 const body = document.querySelector("body");
 const randomColor = document.getElementById("rdm_color");
+const author = document.querySelector("address");
+const authorImage = document.querySelector(".authorDP");
+const getQuoteBtn = document.getElementById("generate_quote_btn");
+const quoteElmnt = document.querySelector(".quote");
 
+// Randomise Color Feature
 const rootStyles = getComputedStyle(document.documentElement);
 const palette = ["--c1", "--c2", "--c3", "--c4", "--c5", "--c6", "--c7", "--c8", "--c9", "--c10"];
 
@@ -35,4 +37,16 @@ const checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('change', () => {
   document.body.classList.toggle('dark');
   section.classList.toggle('dark');
+  author.classList.toggle('dark');
+})
+
+// Get Quote Feature
+
+getQuoteBtn.addEventListener("click", ()=>{
+    quoteData.forEach((quote)=>{
+        console.log(quote);
+        quoteElmnt.innerHTML = quote.quote;
+        author.textContent = quote.author;
+        authorImage.src = quote.picture;
+    })
 })

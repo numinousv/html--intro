@@ -1,4 +1,4 @@
-const quote = {
+const quoteData = [
     {   author: "Martin Luther King Jr.",
         quote: "Injustice anywhere is a threat to justice everywhere.",
         picture: "https://hallmark.edu/wp-content/uploads/2018/07/1-19-Martin-Luther-King-ftr.jpg"
@@ -27,4 +27,6 @@ const quote = {
         quote: "Stay hungry, stay foolish",
         picture: "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13874040/stevejobs.1419962539.png"
     },
-}
+]
+
+export default quoteData;

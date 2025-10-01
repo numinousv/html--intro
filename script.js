@@ -26,7 +26,7 @@ randomColor.addEventListener("click", function() {
     body.style.setProperty("--random1", color1);
     body.style.setProperty("--random2", color2);
     body.classList.add("randomise");
-    section.classList.add("randomise");
+    // section.classList.add("randomise");
 })
 
 // DarkMode & Light Mode Script

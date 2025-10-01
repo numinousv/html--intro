@@ -21,11 +21,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(
-    to right,
-    rgb(239, 247, 252),
-    rgb(147, 168, 210)
+
+  background: linear-gradient(
+    323.87deg,
+    hsl(220, 60%, 48%) 5.4%,
+    hsl(217, 45%, 83%) 136.72%
   );
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
 }
@@ -34,19 +36,16 @@ body.randomise {
 }
 
 section {
-  width: 600px;
   width: fit-content;
   height: 400px;
-  background-image: linear-gradient(
-    to right,
-    rgb(237, 209, 176),
-    rgb(245, 186, 115)
-  );
-  color: rgb(233, 227, 198);
-  border: 3px solid rgb(242, 151, 72);
-  border-radius: 10px;
-  padding: 20px;
+  padding: 50px;
+
   align-items: center;
+  color: hsl(0, 0%, 14%);
+
+  background: hsla(0, 0%, 85%, 0.87);
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 24.35px;
 }
 section.randomise {
   background-image: linear-gradient(
@@ -64,12 +63,6 @@ section.dark {
   background: #262626;
 }
 
-h1 {
-  color: rgba(228, 82, 14, 0.914);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-}
-
 nav.btn-container {
   display: flex;
   gap: 8px;
@@ -81,27 +74,40 @@ nav .settings {
   display: flex;
 }
 
+.btn_link,
+button {
+  padding: 8px 16px;
+  border-radius: 4.5px;
+  background-color: hsl(0, 0%, 99%);
+  cursor: pointer;
+}
+
 .btn_link {
-  display: inline-block;
-  padding: 5px;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
   text-decoration: none;
+  display: inline-block;
+  color: currentColor;
 }
 .home-btn {
-  background-color: rgba(253, 142, 91, 0.914);
+  background-color: hsl(208, 100%, 50%);
+  color: hsl(0, 0%, 99%);
 }
 
 /* Randomise Color Button */
 #rdm_color {
+  border: none;
   margin-right: 10px;
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px, solid black;
-  padding: 5px;
   min-width: fit-content;
-  cursor: pointer;
+}
+
+/* Generate Quote Button */
+#generate_quote_btn {
+  border: none;
+  margin-top: 12px;
+  background-color: hsl(208, 100%, 50%);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1ch;
+  color: hsl(0, 0%, 99%);
 }
 
 /* Dark & Light Mode button */
@@ -130,12 +136,10 @@ nav .settings {
   color: #f39c12;
 }
 .ball {
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   background-color: #fcfcfc;
   border-radius: 50%;
-  /* top:1px;
-  left:1px; */
   position: absolute;
   transition: transform 0.2s linear;
 }
@@ -150,53 +154,51 @@ body.dark {
 }
 
 aside {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   position: relative;
 }
 aside h1 {
+  color: hsl(14, 100%, 45%);
   font-size: 25px;
   font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 aside p {
-  color: rgba(225, 80, 13, 0.914);
-  width: 250px;
-  min-width: 200px;
-  font-size: 16px;
-
+  color: hsl(234, 84%, 10%);
+  min-width: 250px;
+  width: 367px;
+  font-size: 18px;
+  line-height: 23px;
 }
-aside address{
+aside address {
   margin-top: 0;
   margin-bottom: 10px;
   margin-left: 35px;
-  color: black;
+  color: hsl(220, 76%, 26%);
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     width: 30px;
     height: 2px;
-    background-color: #222;
-    position:absolute;
+    background-color: currentColor;
+    position: absolute;
     bottom: 36%;
     left: 0;
   }
 }
 
-#generate_quote_btn {
-  margin-top: 12px;
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px, solid black;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.rhs{
+.rhs {
   position: relative;
   margin-left: 80px;
+
+  svg {
+    color: hsl(0, 0%, 99%);
+  }
 }
 
 aside img {
@@ -207,16 +209,12 @@ aside img {
   border-radius: 12px;
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
-  
+
   position: absolute;
-  right:20%;
-  top:16%;
-
-
- 
+  right: 20%;
+  top: 16%;
 }
 
 aside img:hover {
   transform: scale(1.2);
 }
-

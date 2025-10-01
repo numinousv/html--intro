@@ -8,6 +8,7 @@ const author = document.querySelector("address");
 const authorImage = document.querySelector(".authorDP");
 const getQuoteBtn = document.getElementById("generate_quote_btn");
 const quoteElmnt = document.querySelector(".quote");
+const checkbox = document.getElementById('checkbox');
 
 // Randomise Color Feature
 const rootStyles = getComputedStyle(document.documentElement);
@@ -32,8 +33,6 @@ randomColor.addEventListener("click", function() {
 })
 
 // DarkMode & Light Mode Script
-const checkbox = document.getElementById('checkbox');
-
 checkbox.addEventListener('change', () => {
   document.body.classList.toggle('dark');
   section.classList.toggle('dark');
@@ -41,12 +40,17 @@ checkbox.addEventListener('change', () => {
 })
 
 // Get Quote Feature
-
+let currentIndex = 0;
 getQuoteBtn.addEventListener("click", ()=>{
-    quoteData.forEach((quote)=>{
-        console.log(quote);
+    if(currentIndex < quoteData.length){
+        const quote = quoteData[currentIndex];
         quoteElmnt.innerHTML = quote.quote;
         author.textContent = quote.author;
         authorImage.src = quote.picture;
-    })
+
+        currentIndex++;
+    }else{
+        alert("End of Quote");
+        currentIndex = 0;
+    }
 })

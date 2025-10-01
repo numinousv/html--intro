@@ -10,13 +10,11 @@
   </head>
   <body>
     <div class="container">
-      <h1>Home Page</h1>
       <section>
         <nav class="btn-container">
-          <a href="index.html" class="btn home-btn">Home</a>
-          <a href="contact-page.html" class="btn contact-btn">Contact</a>
-
-
+          <a href="index.html" class="btn_link home-btn">Home</a>
+          <a href="contact-page.html" class="btn_link contact-btn">Contact</a>
+          
           <div class="settings">
             <button id="rdm_color">Randomise Color</button>
             <input type="checkbox" class="checkbox" id="checkbox"/>
@@ -27,13 +25,28 @@
             </label>
           </div>
         </nav>
+
+
         <aside>
-          <p>
-            Give a man a fire and he's warm for a day, but set fire to him and
-            he's warm for the rest of his life .
-          </p>
-          <button id="q_button">Generate Quote</button>
-          <img src="https://files.catbox.moe/hjugey.png" alt="Display Picture" />
+          <div class="lhs">
+            <h1>Quotes</h1>
+            <p>
+              Give a man a fire and he's warm for a day, but set fire to him and
+              he's warm for the rest of his life .
+            </p>
+            <address class="author">CS Lewis</address>
+            <button id="generate_quote_btn">Generate Quote</button>
+          </div>
+
+          <div class="rhs">
+            <svg width="254" height="289" viewBox="0 0 254 289" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M142.5 0C171.132 0 194.606 22.0794 196.827 50.1406C208.844 61.1854 217.633 75.6855 221.62 92.0664C239.686 93.1617 254 108.158 254 126.5C254 145.42 238.77 160.78 219.9 160.994C211.205 187.74 189.454 208.595 162.17 216.042C158.73 231.468 144.963 243 128.5 243C112.565 243 99.1549 232.196 95.1914 217.514C92.7031 217.04 90.2539 216.456 87.8486 215.768C81.5201 223.248 72.0659 228 61.5 228C42.4462 228 27 212.554 27 193.5C27 184.996 30.0776 177.211 35.1787 171.197C31.8644 164.267 29.4715 156.813 28.1602 148.991C27.9407 148.996 27.7207 149 27.5 149C12.3122 149 0 136.688 0 121.5C0 106.312 12.3122 94 27.5 94C27.9779 94 28.4529 94.012 28.9248 94.0361C35.9557 61.7634 61.5379 36.4193 93.9385 29.7344C102.958 12.0839 121.318 0 142.5 0Z" fill="#D9D9D9"/>
+              <circle cx="81" cy="255" r="19" fill="#D9D9D9"/>
+              <circle cx="51" cy="278" r="11" fill="#D9D9D9"/>
+            </svg>
+
+            <img src="https://files.catbox.moe/hjugey.png" alt="Display Picture" />
+          </div>
         </aside>
       </section>
     </div>

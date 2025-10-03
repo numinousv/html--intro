@@ -10,8 +10,8 @@
   --c9: hsl(320, 65%, 84%);
   --c10: hsl(326, 68%, 22%);
 }
-html,
-body {
+
+html, body {
   padding: 0;
   margin: 0;
 }
@@ -31,6 +31,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
 }
+
 body.randomise {
   background-image: linear-gradient(to right, var(--random1), var(--random2));
 }

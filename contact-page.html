@@ -4,18 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>inter webz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="contact-page.css" />
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
   </head>
   <body>
     <div class="container">
-      <h1>Contact Page</h1>
       <section>
         <nav class="btn-container">
-          <a href="index.html" class="btn home-btn">Home</a>
-          <a href="contact-page.html" class="btn contact-btn">Contact</a>
+          <a href="index.html" class="btn_link home-btn">Home</a>
+          <a href="contact-page.html" class="btn_link contact-btn">Contact</a>
+          
+          <div class="settings">
+            <button id="rdm_color">Randomise Color</button>
+            <input type="checkbox" class="checkbox" id="checkbox"/>
+            <label for="checkbox" class="label">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
         </nav>
-
+        
+        <h1>Send us a message!</h1>
         <form id="basicForm">
           <b><label for="fname">Name:</label> </b>
           <input
@@ -42,19 +53,10 @@
               placeholder="Write something..."
             ></textarea>
           </div>
-
           <button type="button" id="submit">Send</button>
-
-
-
-          <button id="random_color">Randomise Color</button>
-            <input type="checkbox" class="checkbox" id="checkbox"/>
-            <label for="checkbox" class="label">
-              <i class="fas fa-sun"></i>
-              <i class="fas fa-moon"></i>
-              <div class="ball"></div>
         </form>
       </section>
     </div>
+    <script src="script.js"  type="module" ></script>
   </body>
 </html>

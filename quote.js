@@ -1,31 +1,31 @@
 const quoteData = [
     {   author: "Martin Luther King Jr.",
         quote: "Injustice anywhere is a threat to justice everywhere.",
-        picture: "https://hallmark.edu/wp-content/uploads/2018/07/1-19-Martin-Luther-King-ftr.jpg"
+        picture: "https://res.cloudinary.com/ds6na5t4s/image/upload/v1759740624/martin-luther_fwaoit.png"
     },
 
     {
         author: "Henry Ford",
         quote: "Whether you think you can or you think you can’t, you’re right.",
-        picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Henry_Ford_portrait_1915_original_%283x4_cropped%29.png/960px-Henry_Ford_portrait_1915_original_%283x4_cropped%29.png"
+        picture: "https://res.cloudinary.com/ds6na5t4s/image/upload/v1759740623/henry-ford_v1gqr4.png"
     },
     
     {
         author: "Winston Churchill",
         quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-        picture: "https://winstonchurchill.org/wp-content/uploads/2021/05/6a00d83451586c69e20111690044a1970c-800wi.jpg"
+        picture: "https://res.cloudinary.com/ds6na5t4s/image/upload/v1759741267/winston-churchill_ow2dwn.png"
     },
 
     {
         author: "Eleanor Roosevelt",
         quote: "The future belongs to those who believe in the beauty of their dreams.",
-        picture: "https://hips.hearstapps.com/hmg-prod/images/gettyimages-515252110.jpg"
+        picture: "https://res.cloudinary.com/ds6na5t4s/image/upload/v1759741237/eleanor-roosevelt_af0cm4.png"
     },
 
     {
         author: "Steve Jobs",
         quote: "Stay hungry, stay foolish",
-        picture: "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13874040/stevejobs.1419962539.png"
+        picture: "https://res.cloudinary.com/ds6na5t4s/image/upload/v1759741494/steve-jobs_zp2zcd.png"
     },
 ]
 

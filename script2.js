@@ -1,14 +1,26 @@
-import quoteData from "./quote.js";
-
 // Initialisation
 const section = document.querySelector("section");
 const body = document.querySelector("body");
 const randomColor = document.getElementById("rdm_color");
-const author = document.querySelector("address");
-const authorImage = document.querySelector(".authorDP");
-const getQuoteBtn = document.getElementById("generate_quote_btn");
-const quoteElmnt = document.querySelector(".quote");
-const checkbox = document.getElementById('checkbox');
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const infoInput = document.getElementById("info");
+// const submitBtn = document.getElementById("submit");
+
+const form = document.getElementById("basicForm");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const dataObject = Object.fromEntries(data.entries());
+    console.log(dataObject);
+
+    alert("Submitted Successfully!");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    infoInput.value = "";
+})
 
 // Randomise Color Feature
 const rootStyles = getComputedStyle(document.documentElement);
@@ -37,20 +49,4 @@ checkbox.addEventListener('change', () => {
   document.body.classList.toggle('dark');
   section.classList.toggle('dark');
   author.classList.toggle('dark');
-})
-
-// Get Quote Feature
-let currentIndex = 0;
-getQuoteBtn.addEventListener("click", ()=>{
-    if(currentIndex < quoteData.length){
-        const quote = quoteData[currentIndex];
-        quoteElmnt.innerHTML = quote.quote;
-        author.textContent = quote.author;
-        authorImage.src = quote.picture;
-
-        currentIndex++;
-    }else{
-        alert("End of Quote");
-        currentIndex = 0;
-    }
 })

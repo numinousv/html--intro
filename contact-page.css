@@ -131,7 +131,7 @@ button {
 
 /* Dark Mode Scene Style */
 body.dark {
-  background: linear-gradient(292.56deg, #0b132b -0.49%, #a2b4d9 97.35%);
+  /* background: linear-gradient(292.56deg, #0b132b -0.49%, #a2b4d9 97.35%); */
   
   p {
     color: #fcfcfc;
